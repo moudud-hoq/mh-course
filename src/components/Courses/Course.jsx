@@ -30,7 +30,7 @@ const Course = ({ course, handleCourseSelection }) => {
           <button
             className="w-full p-2 bg-blue-700 rounded-xl font-bold text-white"
             // 10.6-----
-            onClick={handleCourseSelection}
+            onClick={() => handleCourseSelection(course)}
           >
             Select
           </button>

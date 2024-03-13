@@ -3,9 +3,9 @@ import CoursesIndex from "./components/Courses/CoursesIndex";
 import Header from "./components/Header/Header";
 
 function App() {
-  const handleCourseSelection = () => {
-    console.log("Hello");
-  }; //10.1
+  const handleCourseSelection = (course) => {
+    console.log(course);
+  }; //10.1 (course)10.8
 
   return (
     <div className="container mx-auto">

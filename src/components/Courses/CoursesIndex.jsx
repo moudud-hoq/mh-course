@@ -15,7 +15,7 @@ const CoursesIndex = ({handleCourseSelection}) => {
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
       {courses.map((course) => (
         <Course
-          handleCourseSelection={handleCourseSelection} //10.4
+          handleCourseSelection={handleCourseSelection} //10.4 (Arrow FUnction 10.7)
           key={course.id}
           course={course}
         />
