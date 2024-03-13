@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import Course from "./Course";
 
-const CoursesIndex = () => {
+//10.3 (handleCourseSelection)
+const CoursesIndex = ({handleCourseSelection}) => {
   const [courses, setCourses] = useState([]);
   // =====================
   useEffect(() => {
@@ -13,9 +14,12 @@ const CoursesIndex = () => {
   return (
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
       {courses.map((course) => (
-        <Course key={course.id} course={course} />
+        <Course
+          handleCourseSelection={handleCourseSelection} //10.4
+          key={course.id}
+          course={course}
+        />
       ))}
-
     </div>
   );
 };

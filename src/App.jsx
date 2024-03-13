@@ -2,7 +2,11 @@ import Cart from "./components/Cart";
 import CoursesIndex from "./components/Courses/CoursesIndex";
 import Header from "./components/Header/Header";
 
-const App = () => {
+function App() {
+  const handleCourseSelection = () => {
+    console.log("Hello");
+  }; //10.1
+
   return (
     <div className="container mx-auto">
       {/* Header */}
@@ -14,7 +18,8 @@ const App = () => {
       <div className="md:flex gap-5 grid grid-cols-12">
         {/* Course Side  div*/}
         <div className="col-span-9">
-          <CoursesIndex />
+          {/* handleCourseSelection={handleCourseSelection} ========Props Passing==10.2 */}
+          <CoursesIndex handleCourseSelection={handleCourseSelection} />
         </div>
         {/* Cart Side div*/}
         <div className="col-span-3">
@@ -23,6 +28,6 @@ const App = () => {
       </div>
     </div>
   );
-};
+}
 
 export default App;
