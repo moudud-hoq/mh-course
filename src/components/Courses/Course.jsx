@@ -1,17 +1,34 @@
-const Course = () => {
+// eslint-disable-next-line react/prop-types
+import { MdOutlinePriceCheck } from "react-icons/md";
+import { CiCreditCard1 } from "react-icons/ci";
+
+const Course = ({ course }) => {
+  const { photo, name, description, price, credit } = course;
   return (
     <div className="card card-compact bg-base-100 shadow-xl">
       <figure>
-        <img
-          src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-          alt="Shoes"
-        />
+        <img src={photo} alt={name} />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">Shoes!</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
+        <h2 className="card-title">{name}</h2>
+        <p>{description}</p>
+
+        <div className="flex text-center">
+          <p className="w-1/2 flex items-center gap-1">
+            <MdOutlinePriceCheck />
+            <b>Price: </b>
+            {price}
+          </p>
+          <p className="w-1/2 flex items-center gap-1">
+            <CiCreditCard1 />
+            <b>Credit:</b> {credit}
+          </p>
+        </div>
+
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Buy Now</button>
+          <button className="w-full p-2 bg-blue-700 rounded-xl font-bold text-white">
+            Select
+          </button>
         </div>
       </div>
     </div>
