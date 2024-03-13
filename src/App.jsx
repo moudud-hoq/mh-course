@@ -13,11 +13,11 @@ const App = () => {
 
       <div className="md:flex gap-5 grid grid-cols-12">
         {/* Course Side  div*/}
-        <div className="col-span-10">
+        <div className="col-span-9">
           <CoursesIndex />
         </div>
         {/* Cart Side div*/}
-        <div className="col-span-2">
+        <div className="col-span-3">
           <Cart />
         </div>
       </div>
