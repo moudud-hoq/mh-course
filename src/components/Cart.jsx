@@ -1,7 +1,10 @@
-const Cart = () => {
+//11.4{carts}
+const Cart = ({ carts }) => {
   return (
     <div className="bg-slate-100 p-4 rounded-xl md:w-72 space-y-4 ">
-      <h3 className="font-bold text-blue-500">Credit Hour Remaining: </h3>
+      <h3 className="font-bold text-blue-500">
+        Credit Hour Remaining: {carts.length} hr
+      </h3>
       <hr />
       <h3 className="font-bold">Course Name</h3>
       <hr />

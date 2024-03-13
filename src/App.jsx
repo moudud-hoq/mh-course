@@ -1,10 +1,14 @@
+import { useState } from "react";
 import Cart from "./components/Cart";
 import CoursesIndex from "./components/Courses/CoursesIndex";
 import Header from "./components/Header/Header";
 
 function App() {
+  const [carts, setCarts] = useState([]); //11.0
+
   const handleCourseSelection = (course) => {
     console.log(course);
+    setCarts((data) => [...data, course]); //11.1
   }; //10.1 (course)10.8
 
   return (
@@ -23,7 +27,8 @@ function App() {
         </div>
         {/* Cart Side div*/}
         <div className="col-span-3">
-          <Cart />
+          {/* 11.3 --- carts={carts}*/}
+          <Cart carts={carts} />
         </div>
       </div>
     </div>
