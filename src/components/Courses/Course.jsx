@@ -2,7 +2,6 @@
 import { MdOutlinePriceCheck } from "react-icons/md";
 import { CiCreditCard1 } from "react-icons/ci";
 
-//10.5 == {   , handleCourseSelection }
 const Course = ({ course, handleCourseSelection }) => {
   const { photo, name, description, price, credit } = course;
 
@@ -30,7 +29,7 @@ const Course = ({ course, handleCourseSelection }) => {
         <div className="card-actions justify-end">
           <button
             className="w-full p-2 bg-blue-700 rounded-xl font-bold text-white"
-            // 10.6-----
+            
             onClick={() => handleCourseSelection(course)}
           >
             Select
