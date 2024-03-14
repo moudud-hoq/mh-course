@@ -1,7 +1,9 @@
 const Header = () => {
   return (
-    <div className="bg-slate-100 p-4 text-center text-2xl font-bold">
-      <h1 className="text-green-600 ">PH Course</h1>
+    <div className="bg-white p-4 text-center text-2xl font-bold shadow-md rounded-b-md">
+      <h1 className="text-amber-600 text-3xl">
+        <span className="text-4xl italic text-yellow-400">MH</span>Course
+      </h1>
     </div>
   );
 };

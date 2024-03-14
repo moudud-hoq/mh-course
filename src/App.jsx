@@ -7,14 +7,13 @@ function App() {
   const [carts, setCarts] = useState([]); //11.0
 
   const handleCourseSelection = (course) => {
-    console.log(course);
     setCarts((data) => [...data, course]); //11.1
   }; //10.1 (course)10.8
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto ">
       {/* Header */}
-      <div className="mb-2">
+      <div className="mb-8 sticky">
         <Header />
       </div>
       {/* Body */}

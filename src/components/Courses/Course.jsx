@@ -2,9 +2,10 @@
 import { MdOutlinePriceCheck } from "react-icons/md";
 import { CiCreditCard1 } from "react-icons/ci";
 
-//10.5 == {course, handleCourseSelection }
+//10.5 == {   , handleCourseSelection }
 const Course = ({ course, handleCourseSelection }) => {
   const { photo, name, description, price, credit } = course;
+
   return (
     <div className="card card-compact bg-base-100 shadow-xl">
       <figure>
@@ -35,6 +36,7 @@ const Course = ({ course, handleCourseSelection }) => {
             Select
           </button>
         </div>
+
       </div>
     </div>
   );
